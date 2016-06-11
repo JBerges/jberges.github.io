@@ -1,0 +1,23 @@
+<header class="site-header">
+
+  <div class="wrapper">
+
+
+
+    <nav class="site-nav">
+      {% for my_page in site.pages %}
+        {% if my_page.title %}
+        <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+        {% endif %}
+      {% endfor %}
+
+    </nav>
+
+  </div>
+  <div class="wrapper site-title">
+  <a class="site-title-link" href="{{ site.baseurl }}/">
+    <img src="{{ site.baseurl }}/assets/img/logo.png" />
+    <span class="site-moto">Hi! This is <strong>Jordi Berges</strong>,<br /> welcome to my page</span>
+  </a>
+  </div>
+</header>

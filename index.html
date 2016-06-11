@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <h2 class="post-title">
+          <a class="post-title-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
+        <p class="post-excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>'}} ... <a class="post-read-more" href="{{ post.url | prepend: site.baseurl }}">Read more</a></p>
+
+        {% if post.categories.size > 0  %}
+          <span class="post-categories"><i class="fa fa-tags"></i> {{post.categories | join: ', ' }}</span>
+        {% endif %}
+
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
