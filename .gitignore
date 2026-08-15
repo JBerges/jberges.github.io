@@ -1,3 +1,9 @@
 _site
 .sass-cache
 .jekyll-metadata
+# Ignore local Bundler configuration
+.bundle/
+
+# Ignore local gem downloads
+vendor/
+
