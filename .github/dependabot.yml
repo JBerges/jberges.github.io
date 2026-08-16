@@ -1,0 +1,15 @@
+version: 2
+updates:
+  # 1. Update Jekyll themes and plugins managed via Gemfile
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "weekly" # Options: daily, weekly, monthly
+    open-pull-requests-limit: 5
+
+  # 2. Optional: Keep GitHub Actions workflows up to date
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
